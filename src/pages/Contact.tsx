@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import Map from "@/components/Map";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
@@ -94,6 +95,22 @@ const Contact = () => {
                 </div>
               </CardContent>
             </Card>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-gradient-warm">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+              Find Us Here
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              Visit our facility in Feroke, Kozhikode for direct consultation
+            </p>
+          </div>
+          <div className="max-w-4xl mx-auto">
+            <Map />
           </div>
         </div>
       </section>
