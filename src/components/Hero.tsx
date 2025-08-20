@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
-import heroBoxes from "@/assets/hero-boxes.jpg";
+import { Link } from "react-router-dom";
+import heroSaj from "@/assets/hero-saj.jpg";
 
 const Hero = () => {
   return (
@@ -8,26 +9,29 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary leading-tight">
-              Premium Cake Boxes for Every Occasion
+              Designed to keep freshness inside and smiles outside
             </h1>
             <p className="text-lg text-muted-foreground max-w-lg">
-              Professional packaging solutions for bakeries, cake shops, and food businesses. 
-              From birthday celebrations to everyday treats, we've got the perfect box.
+              We deliver eco-friendly, durable, and stylish packaging solutions that enhance food presentation and safety.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-gradient-hero text-primary-foreground hover:opacity-90 transition-opacity">
-                Browse Products
-              </Button>
-              <Button variant="outline" size="lg">
-                Request Samples
-              </Button>
+              <Link to="/products">
+                <Button size="lg" className="bg-gradient-hero text-primary-foreground hover:opacity-90 transition-opacity">
+                  Browse Products
+                </Button>
+              </Link>
+              <Link to="/contact">
+                <Button variant="outline" size="lg">
+                  Get Quote
+                </Button>
+              </Link>
             </div>
           </div>
           
           <div className="relative">
             <img 
-              src={heroBoxes} 
-              alt="Professional cake boxes in various sizes" 
+              src={heroSaj} 
+              alt="Eco-friendly packaging solutions by Saj Bio Paks" 
               className="w-full h-auto rounded-lg shadow-card"
             />
           </div>

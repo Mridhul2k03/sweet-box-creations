@@ -1,24 +1,36 @@
 import { Button } from "@/components/ui/button";
+import { Link, useLocation } from "react-router-dom";
 
 const Header = () => {
+  const location = useLocation();
+  
   return (
     <header className="bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50 w-full border-b border-border">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center">
-            <h1 className="text-2xl font-bold text-primary">CakeBox Pro</h1>
+            <Link to="/" className="text-2xl font-bold text-primary">Saj Bio Paks</Link>
           </div>
           
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#products" className="text-foreground hover:text-primary transition-colors">
+            <Link 
+              to="/products" 
+              className={`text-foreground hover:text-primary transition-colors ${location.pathname === '/products' ? 'text-primary' : ''}`}
+            >
               Products
-            </a>
-            <a href="#about" className="text-foreground hover:text-primary transition-colors">
+            </Link>
+            <Link 
+              to="/about" 
+              className={`text-foreground hover:text-primary transition-colors ${location.pathname === '/about' ? 'text-primary' : ''}`}
+            >
               About
-            </a>
-            <a href="#contact" className="text-foreground hover:text-primary transition-colors">
+            </Link>
+            <Link 
+              to="/contact" 
+              className={`text-foreground hover:text-primary transition-colors ${location.pathname === '/contact' ? 'text-primary' : ''}`}
+            >
               Contact
-            </a>
+            </Link>
           </nav>
           
           <Button variant="default" className="hidden sm:inline-flex">
